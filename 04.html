@@ -1,0 +1,22 @@
+<script>
+    //Problema: Alterar Nomes
+    /*
+    Considere a existência dos seguintes nomes:
+    let nomes = ["Hilário", "Rafaela", "José", "Bárbara", "Fábio", "Júlia"];
+    Verifique se esses nomes contém letras com acento agudo e substitua por letras sem acento agudo.
+    Apresente a lista corrigida ao final do programa.
+    */
+
+    //ENTRADA
+    let nomes = ["Hilário", "Rafaela", "José", "Bárbara", "Fábio", "Júlia"];
+    //PROCESSAMENTO
+    for (letras of nomes) {
+        letras = letras
+            .replace(/á/g, 'a')
+            .replace(/é/g, 'e')
+            .replace(/í/g, 'i')
+            .replace(/ó/g, 'o')
+            .replace(/ú/g, 'u')
+        document.write(`${letras}, `)
+    }
+</script>
