@@ -17,13 +17,16 @@
 
         if (estado in estados) {
             estados[estado].push(cidade);
-        } else {
+        }
+        else {
             estados[estado] = [cidade];
         }
     }
     let estadosOrdenados = Object.entries(estados).sort((a, b) => b[1].length - a[1].length);
-    alert(`Estados e suas respectivas cidades (ordenados por quantidade de cidades de forma decrescente):`);
+    // alert(`Estados e suas respectivas cidades (ordenados por quantidade de cidades de forma decrescente):`);
+    let mensagem = `Estados e suas respectivas cidades (ordenados por quantidade de cidades de forma decrescente):<br>`;
     for (let [estado, cidadesDoEstado] of estadosOrdenados) {
-        alert(`${estado}: ${cidadesDoEstado.join(", ")} (${cidadesDoEstado.length} cidades)`);
+        mensagem += `${estado}: ${cidadesDoEstado.join(", ")} (${cidadesDoEstado.length} cidades)<br>`;
     }
+    document.write(mensagem);
 </script>
